@@ -1,0 +1,311 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --color-cream-50: #fefdfb;
+  --color-cream-100: #fdf8f3;
+  --color-blush-100: #fce7f3;
+  --color-blush-300: #f9a8d4;
+  --color-blush-500: #ec4899;
+  --color-blush-600: #db2777;
+  --color-sage-100: #f0f4f0;
+  --color-sage-500: #84a584;
+}
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+  }
+}
+
+/* Component Styles */
+@layer components {
+  .btn-primary {
+    @apply bg-blush-500 hover:bg-blush-600 text-white px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30 px-6 py-3 rounded-full font-medium transition-all duration-300;
+  }
+  
+  .product-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-20;
+  }
+  
+  .container-custom {
+    @apply max-w-6xl mx-auto px-6;
+  }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .bg-cream-50 {
+    background-color: var(--color-cream-50);
+  }
+  
+  .bg-cream-100 {
+    background-color: var(--color-cream-100);
+  }
+  
+  .bg-blush-100 {
+    background-color: var(--color-blush-100);
+  }
+  
+  .bg-blush-300 {
+    background-color: var(--color-blush-300);
+  }
+  
+  .bg-blush-500 {
+    background-color: var(--color-blush-500);
+  }
+  
+  .bg-blush-600 {
+    background-color: var(--color-blush-600);
+  }
+  
+  .bg-sage-100 {
+    background-color: var(--color-sage-100);
+  }
+  
+  .bg-sage-500 {
+    background-color: var(--color-sage-500);
+  }
+  
+  .text-blush-300 {
+    color: var(--color-blush-300);
+  }
+  
+  .text-blush-500 {
+    color: var(--color-blush-500);
+  }
+  
+  .text-blush-600 {
+    color: var(--color-blush-600);
+  }
+  
+  .text-sage-500 {
+    color: var(--color-sage-500);
+  }
+  
+  .hover\:bg-blush-600:hover {
+    background-color: var(--color-blush-600);
+  }
+  
+  .hover\:bg-cream-50:hover {
+    background-color: var(--color-cream-50);
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scroll Animations */
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.bounce-in {
+  animation: bounceIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-text {
+    font-size: 2rem;
+  }
+  
+  .section-padding {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-blush-500);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-blush-600);
+}
+
+/* Performance Optimizations */
+.product-card img,
+.hero-image {
+  will-change: transform;
+}
+
+.btn-primary,
+.btn-secondary {
+  will-change: transform, background-color;
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid var(--color-blush-500);
+  outline-offset: 2px;
+}
+
+/* Loading States */
+.loading-shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* WhatsApp Integration Styles */
+.whatsapp-button {
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-button:hover {
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Mobile-First Responsive Grid */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 480px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Touch-Friendly Interactive Elements */
+@media (max-width: 768px) {
+  button, .btn-primary, .btn-secondary {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .product-card {
+    transition: transform 0.2s ease;
+  }
+  
+  .product-card:active {
+    transform: scale(0.98);
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  .bg-blush-500 {
+    background-color: #d91b60;
+  }
+  
+  .text-stone-600 {
+    color: #333333;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-bounce {
+    animation: none;
+  }
+}

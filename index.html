@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanai - Koleksi Homewear Wanita Premium | Nyaman & Cantik di Rumah</title>
+    <link rel="icon" type="image/png" href="./public/favicon.png">
+    <meta name="description" content="Koleksi homewear wanita premium. Bahan adem, pengiriman cepat, CS responsif. Konsultasi gratis via WhatsApp.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/main.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s){
+            if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+        }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        
+        fbq('init', 'YOUR_PIXEL_ID'); // Replace YOUR_PIXEL_ID with your actual Meta Pixel ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/> <!-- Replace YOUR_PIXEL_ID -->
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- WhatsApp Integration with Meta Pixel Tracking -->
+    <script>
+        // Track ViewContent event when page loads
+        window.addEventListener('load', function() {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'Kanai Landing Page',
+                    content_category: 'Homewear Collection',
+                    content_type: 'product_group',
+                    value: 0,
+                    currency: 'IDR'
+                });
+            }
+        });
+
+        function openWhatsApp(product = '') {
+            const phoneNumber = '6285798182929'; // Replace with actual WhatsApp number
+            let message = '';
+            let eventData = {};
+            
+            if (product) {
+                message = `Halo! Saya tertarik dengan ${product}. Boleh minta info lengkap dan katalog produknya?`;
+                
+                // Track Lead event for specific product interest
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: product,
+                        content_category: 'Homewear Product',
+                        value: 0,
+                        currency: 'IDR'
+                    });
+                }
+            } else {
+                message = 'Halo! Saya mau bertanya seputar Kanai.id. Boleh tolong dibantu?';
+            }
+            
+            // Track Contact event for all WhatsApp interactions
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Contact', {
+                    content_name: product || 'General Inquiry',
+                    content_category: 'WhatsApp Contact',
+                    value: 0,
+                    currency: 'IDR'
+                });
+            }
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Optional: Track conversion when user confirms purchase
+        // Call this function when you want to track a successful conversion
+        function trackConversion(productName, value) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Purchase', {
+                    content_name: productName,
+                    content_type: 'product',
+                    value: value,
+                    currency: 'IDR'
+                });
+            }
+        }
+
+        function togglePrivacy() {
+            const modal = document.getElementById('privacyModal');
+            modal.classList.toggle('hidden');
+
+            document.body.style.overflow = modal.classList.contains('hidden') ? 'auto' : 'hidden';
+        }
+
+        function toggleTerms() {
+            const modal = document.getElementById('termsModal');
+            modal.classList.toggle('hidden');
+
+            document.body.style.overflow = modal.classList.contains('hidden') ? 'auto' : 'hidden';
+        }
+
+        // Opsional: Tutup modal jika user klik di luar kotak putih (area gelap)
+        window.onclick = function(event) {
+            const pModal = document.getElementById('privacyModal');
+            const tModal = document.getElementById('termsModal');
+            if (event.target == pModal) togglePrivacy();
+            if (event.target == tModal) toggleTerms();
+        }
+
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('main-nav');
+            const logo = document.getElementById('nav-logo');
+            
+            // Munculkan logo dan background putih setelah scroll 100px
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-white/95', 'shadow-sm', 'backdrop-blur-sm', 'py-3');
+                
+                // Munculkan logo (Fade In + Slide Up)
+                logo.classList.remove('opacity-0', 'translate-y-2');
+                logo.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                // Sembunyikan kembali saat di paling atas
+                nav.classList.remove('bg-white/95', 'shadow-sm', 'backdrop-blur-sm', 'py-3');
+                
+                // Hilangkan logo
+                logo.classList.add('opacity-0', 'translate-y-2');
+                logo.classList.remove('opacity-100', 'translate-y-0');
+            }
+        });
+    </script>
+  </head>
+<body class="font-serif text-stone-800 bg-cream-50">
+    
+    <nav id="main-nav" class="fixed top-0 left-0 w-full z-[50] py-3 transition-all duration-500">
+        <div class="container mx-auto flex justify-center items-center px-6">
+            <img 
+                id="nav-logo"
+                src="./public/logo.PNG" 
+                alt="Kanai Logo" 
+                class="h-12 md:h-14 w-auto opacity-0 translate-y-2 transition-all duration-500 ease-out"
+            />
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cream-50">
+        <div class="absolute inset-0 z-0">
+            <img 
+                src="https://images.unsplash.com/photo-1690558612696-659eeafc2afe" 
+                alt="Wanita cantik mengenakan piyama nyaman di kamar tidur yang aesthetic" 
+                class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-gradient-to-b from-rose-900/30 via-rose-800/20 to-dusty-300/40"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
+            <h1 class="text-4xl md:text-6xl font-normal text-white mb-4 leading-tight">
+                Nyaman di Rumah,<br>
+                <span class="font-bold text-rose-200">Cantik Setiap Hari</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/95 mb-8 font-light max-w-2xl mx-auto">
+                11+ koleksi homewear premium dengan beragam pilihan warna & size. 
+                <span class="font-medium">Admin siap bantu kamu menemukan yang perfect!</span>
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button 
+                    onclick="openWhatsApp()"
+                    class="bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                    🛍️ Lihat Koleksi
+                </button>
+                <button 
+                    onclick="openWhatsApp()"
+                    class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
+                >
+                    💬 Chat Admin
+                </button>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">🌸</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Bahan Super Adem</h3>
+                    <p class="text-stone-600 text-sm">Katun premium & rayon halus yang breathable untuk kenyamanan maksimal</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-dusty-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">🚚</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Pengiriman Express</h3>
+                    <p class="text-stone-600 text-sm">Same day delivery Bandung & pengiriman cepat ke seluruh Indonesia</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">💝</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">CS Super Responsif</h3>
+                    <p class="text-stone-600 text-sm">Admin siap bantu 24/7 untuk konsultasi produk & ukuran yang tepat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-20 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
+                    Koleksi <span class="font-bold text-rose-600">Favorit</span>
+                </h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">
+                    Produk pilihan yang paling disukai customer dengan berbagai pilihan warna cantik
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Featured Product 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1727791865934-5a72e29f5345" 
+                            alt="Set Piyama Silk Premium dengan desain minimalis dan elegan" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Set Piyama Silk Premium</h3>
+                        <p class="text-stone-600 text-sm mb-3">Bahan silk halus, 5 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 189.000</p>
+                        <button 
+                            onclick="openWhatsApp('Set Piyama Silk Premium')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
+                        >
+                            💬 Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Featured Product 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1e2a64630-1765295222711.png" 
+                            alt="Daster Midi Katun dengan motif floral yang feminin dan nyaman" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Daster Midi Katun</h3>
+                        <p class="text-stone-600 text-sm mb-3">Motif floral, 8 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 99.000</p>
+                        <button 
+                            onclick="openWhatsApp('Daster Midi Katun')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
+                        >
+                            💬 Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Featured Product 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_190d4b2b0-1769074747147.png" 
+                            alt="Set Rumahan Casual dengan kombinasi atasan dan celana yang stylish" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Set Rumahan Casual</h3>
+                        <p class="text-stone-600 text-sm mb-3">Bahan rayon, 6 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 149.000</p>
+                        <button 
+                            onclick="openWhatsApp('Set Rumahan Casual')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
+                        >
+                            💬 Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Collection -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
+                    Koleksi <span class="font-bold text-rose-600">Lengkap</span>
+                </h2>
+                <p class="text-stone-600 max-w-2xl mx-auto">
+                    Produk pilihan dengan beragam style, warna, dan size. Admin siap bantu kamu pilih yang cocok!
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_186c3f03c-1769074750421.png" 
+                            alt="Set Piyama Silk Premium dengan bahan berkualitas tinggi" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Set Piyama Silk</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 189K</p>
+                        <button 
+                            onclick="openWhatsApp('Set Piyama Silk Premium')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1e0b30939-1769074749346.png" 
+                            alt="Daster Midi Katun dengan motif cantik dan bahan adem" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Daster Midi Katun</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 99K</p>
+                        <button 
+                            onclick="openWhatsApp('Daster Midi Katun')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_172114bc4-1767512828727.png" 
+                            alt="Set Rumahan Casual untuk kenyamanan sehari-hari" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Set Rumahan Casual</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 149K</p>
+                        <button 
+                            onclick="openWhatsApp('Set Rumahan Casual')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1cf3dbdfc-1769074750149.png" 
+                            alt="Kimono Outer elegan untuk layering yang sempurna" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Kimono Outer</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 119K</p>
+                        <button 
+                            onclick="openWhatsApp('Kimono Outer')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1690143938408-2c691e925698" 
+                            alt="Nightgown Satin dengan desain mewah dan elegan" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Nightgown Satin</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 159K</p>
+                        <button 
+                            onclick="openWhatsApp('Nightgown Satin')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1060790d4-1769074747891.png" 
+                            alt="Piyama Short Set untuk cuaca panas dan kenyamanan maksimal" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Piyama Short Set</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 129K</p>
+                        <button 
+                            onclick="openWhatsApp('Piyama Short Set')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_121a529ec-1769074748364.png" 
+                            alt="Lounge Dress dengan desain casual dan nyaman untuk aktivitas rumah" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Lounge Dress</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 139K</p>
+                        <button 
+                            onclick="openWhatsApp('Lounge Dress')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_13c0dc2a7-1769074749178.png" 
+                            alt="Sleep Robe dengan bahan mewah untuk kenyamanan ekstra" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Sleep Robe</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 179K</p>
+                        <button 
+                            onclick="openWhatsApp('Sleep Robe')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 9 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1bb454ae9-1769074749801.png" 
+                            alt="Camisole Set dengan desain feminin dan bahan berkualitas" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Camisole Set</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 109K</p>
+                        <button 
+                            onclick="openWhatsApp('Camisole Set')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 10 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_16ffeab4f-1769074748712.png" 
+                            alt="Maternity Sleepwear untuk ibu hamil dengan kenyamanan maksimal" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Maternity Sleepwear</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 169K</p>
+                        <button 
+                            onclick="openWhatsApp('Maternity Sleepwear')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 11 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
+                    <div class="aspect-square overflow-hidden">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_13cd0a3f8-1764694310209.png" 
+                            alt="Thermal Pajama Set untuk kenyamanan di cuaca dingin" 
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Thermal Pajama</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 199K</p>
+                        <button 
+                            onclick="openWhatsApp('Thermal Pajama Set')"
+                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
+                        >
+                            Tanya Admin
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-cream-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
+                    Kata <span class="font-bold text-rose-600">Customer</span>
+                </h2>
+                <p class="text-stone-600">Testimoni asli dari customer yang sudah merasakan kenyamanan produk kami</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-rose-50">
+                    <div class="flex items-center mb-4">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_17bfbbd03-1765204664968.png" 
+                            alt="Testimoni customer tentang kualitas produk Kanai" 
+                            class="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="font-semibold text-stone-800">Sari Wulandari</h4>
+                            <div class="flex text-rose-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm italic">
+                        "Piyama silk-nya lembut banget! Admin juga super helpful bantu pilih size yang pas. Pengiriman cepet, packaging rapi. Pokoknya recommended!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-rose-50">
+                    <div class="flex items-center mb-4">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_161425a76-1767268611699.png" 
+                            alt="Review positif dari customer setia Kanai" 
+                            class="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="font-semibold text-stone-800">Maya Indira</h4>
+                            <div class="flex text-rose-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm italic">
+                        "Sudah beli 3 set! Bahannya adem banget, cocok buat cuaca Jakarta. Admin sabar jawab pertanyaan, katalog lengkap. Next order lagi deh!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-rose-50">
+                    <div class="flex items-center mb-4">
+                        <img 
+                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1ecf99f13-1764686781589.png" 
+                            alt="Kepuasan customer terhadap layanan Kanai" 
+                            class="w-12 h-12 rounded-full object-cover mr-4"
+                        />
+                        <div>
+                            <h4 class="font-semibold text-stone-800">Rina Permata</h4>
+                            <div class="flex text-rose-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-stone-600 text-sm italic">
+                        "Daster katunnya nyaman banget dipake seharian. Motifnya cantik, warnanya sesuai foto. Customer service ramah, fast respon. Love it!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gradient-to-b from-rose-500 to-rose-600 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl md:text-5xl font-normal mb-4">
+                Siap Upgrade <span class="font-bold">Homewear</span> Kamu?
+            </h2>
+            <p class="text-xl mb-8 text-white/95">
+                Chat admin sekarang untuk konsultasi gratis dan dapatkan rekomendasi produk yang perfect untuk kamu!
+            </p>
+            
+            <button 
+                onclick="openWhatsApp()"
+                class="bg-white text-rose-600 px-10 py-4 rounded-full font-semibold text-lg hover:bg-cream-50 transition-all duration-300 transform hover:scale-105 shadow-xl"
+            >
+                💬 Chat Admin Sekarang
+            </button>
+            
+            <div class="mt-8 text-white/90 text-sm">
+                <p>✅ Konsultasi Gratis • ✅ Katalog Lengkap • ✅ Fast Response</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-stone-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-4 flex justify-center">
+                <img 
+                    src="./public/logo.PNG" 
+                    alt="Kanai Logo" 
+                    class="h-12 w-auto mb-4"
+                />
+            </div>
+            <div class="mb-4">
+                <h3 class="text-2xl font-semibold mb-2">Kanai.id</h3>
+                <p class="text-stone-300 text-sm">Premium homewear untuk kenyamanan maksimal di rumah</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-stone-300">
+                <span>📱 Customer Service 24/7</span>
+                <span class="hidden md:inline">•</span>
+                <span>🚚 Pengiriman Express</span>
+                <span class="hidden md:inline">•</span>
+                <span>💝 Garansi Kualitas</span>
+            </div>
+
+            <div class="mt-4 flex justify-center gap-6 text-xs text-stone-400">
+                <a href="javascript:void(0)" onclick="togglePrivacy()" class="hover:underline italic">Privacy Policy</a>
+                <span class="text-stone-600">|</span>
+                <a href="javascript:void(0)" onclick="toggleTerms()" class="hover:underline">Terms of Service</a>
+                <a href="javascript:void(0)" onclick="openWhatsApp()" class="hover:underline">Hubungi Kami</a>
+            </div>
+            
+            <div class="mt-6 pt-6 border-t border-stone-700 text-xs text-stone-400">
+                <p>Jl. Inhoftank No.82a, Kb. Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235, Indonesia</p>
+                <p>&copy; 2026 Kanai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="privacyModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-900/80 backdrop-blur-sm p-4">
+        <div class="relative max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl mt-10 mb-10 p-8">
+            <button onclick="togglePrivacy()" class="absolute top-4 right-4 text-stone-400 hover:text-rose-500 text-2xl font-bold">&times;</button>
+            
+            <div class="prose prose-stone">
+                <h2 class="text-2xl font-bold text-rose-600 mb-4">Kebijakan Privasi Kanai.id</h2>
+                <p class="text-sm text-stone-500 mb-4 italic">Terakhir diperbarui: 23 Januari 2026</p>
+                
+                <div class="text-stone-700 text-sm space-y-4 leading-relaxed">
+                    <p>Kami di <strong>Kanai.id</strong> berkomitmen untuk melindungi privasi pengunjung kami. Kebijakan ini menjelaskan bagaimana kami mengelola informasi Anda.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">1. Pengumpulan Informasi</h3>
+                    <p>Kami mengumpulkan informasi kontak seperti nama dan nomor telepon hanya ketika Anda menghubungi kami via WhatsApp secara sukarela.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">2. Meta Pixel & Cookies</h3>
+                    <p>Kami menggunakan Meta Pixel untuk melacak efektivitas iklan kami. Data ini membantu kami menampilkan iklan yang relevan tanpa mengidentifikasi identitas pribadi Anda secara otomatis.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">3. Keamanan Data</h3>
+                    <p>Data yang Anda berikan melalui WhatsApp akan kami simpan secara rahasia dan hanya digunakan untuk keperluan pelayanan pelanggan dan informasi produk Kanai.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">4. Hubungi Kami</h3>
+                    <p>Untuk pertanyaan terkait data, Anda dapat menghubungi kami melalui nomor WhatsApp yang tertera di halaman ini.</p>
+                </div>
+                
+                <button onclick="togglePrivacy()" class="mt-8 w-full bg-stone-100 hover:bg-stone-200 text-stone-600 py-3 rounded-xl font-medium transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="termsModal" class="fixed inset-0 z-[100] hidden overflow-y-auto bg-stone-900/80 backdrop-blur-sm p-4">
+        <div class="relative max-w-2xl mx-auto bg-white rounded-2xl shadow-2xl mt-10 mb-10 p-8">
+            <button onclick="toggleTerms()" class="absolute top-4 right-4 text-stone-400 hover:text-rose-500 text-2xl font-bold">&times;</button>
+            
+            <div class="prose prose-stone">
+                <h2 class="text-2xl font-bold text-rose-600 mb-4">Syarat & Ketentuan Kanai.id</h2>
+                <p class="text-sm text-stone-500 mb-4 italic">Terakhir diperbarui: 23 Januari 2026</p>
+                
+                <div class="text-stone-700 text-sm space-y-4 leading-relaxed">
+                    <p>Dengan mengakses situs <strong>Kanai.id</strong>, Anda dianggap telah menyetujui syarat dan ketentuan berikut:</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">1. Layanan Produk</h3>
+                    <p>Kami berupaya menampilkan warna dan detail produk seakurat mungkin. Namun, perbedaan tampilan pada layar perangkat Anda mungkin terjadi. Produk dikirim sesuai dengan konfirmasi pesanan terakhir via WhatsApp.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">2. Pemesanan & Pembayaran</h3>
+                    <p>Pemesanan hanya dianggap sah jika dikonfirmasi oleh Admin resmi kami melalui WhatsApp. Segala bentuk transaksi di luar instruksi Admin resmi bukan merupakan tanggung jawab Kanai.id.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">3. Kebijakan Pengiriman</h3>
+                    <p>Estimasi waktu pengiriman tergantung pada jasa ekspedisi yang dipilih. Kami akan membantu pelacakan (tracking) barang hingga sampai ke alamat Anda.</p>
+                    
+                    <h3 class="font-bold uppercase text-rose-500">4. Perubahan Harga</h3>
+                    <p>Harga yang tertera dapat berubah sewaktu-waktu sesuai dengan promo yang berlaku tanpa pemberitahuan sebelumnya. Harga yang berlaku adalah harga saat konfirmasi pesanan dilakukan.</p>
+
+                    <h3 class="font-bold uppercase text-rose-500">5. Kebijakan Retur (Pengembalian)</h3>
+                    <p>Kami sangat menjaga kualitas produk kami, namun jika terjadi kendala, berlaku ketentuan berikut:</p>
+                    <ul class="list-disc ml-5 space-y-1">
+                        <li>Retur hanya berlaku untuk produk yang mengalami cacat produksi atau salah pengiriman ukuran/warna oleh tim kami.</li>
+                        <li>Wajib menyertakan <strong>video unboxing</strong> tanpa jeda saat paket pertama kali dibuka sebagai bukti utama.</li>
+                        <li>Klaim retur maksimal dilakukan 2x24 jam setelah status paket diterima menurut sistem ekspedisi.</li>
+                        <li>Produk harus dalam kondisi asli, belum dicuci, dan label/tag masih terpasang.</li>
+                        <li>Keputusan akhir mengenai persetujuan retur sepenuhnya mengikuti kebijakan internal toko Kanai.id.</li>
+                    </ul>
+                </div>
+                
+                <button onclick="toggleTerms()" class="mt-8 w-full bg-stone-100 hover:bg-stone-200 text-stone-600 py-3 rounded-xl font-medium transition-colors">
+                    Tutup
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script id="dhws-dataInjector" src="/public/dhws-data-injector.js"></script>
+</body>
+</html>
