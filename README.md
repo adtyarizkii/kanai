@@ -38,10 +38,16 @@ html_app/
 ├── css/
 │   ├── tailwind.css   # Tailwind source file with custom utilities
 │   └── main.css       # Compiled CSS (generated)
-├── public/             # Assets
+├── public/             
+│   ├── dhws-data-injector.js
+│   ├── favicon.png
+│   ├── logo.png
+│   └── manifest.json 
+├── .gitignore
 ├── index.html         # Main entry point
 ├── package.json       # Project dependencies and scripts
-└── tailwind.config.js # Tailwind CSS configuration
+├── tailwind.config.js # Tailwind CSS configuration
+└── vercel.json
 ```
 
 ## 🎨 Styling
