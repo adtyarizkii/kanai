@@ -175,12 +175,9 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button 
-                    onclick="openWhatsApp()"
-                    class="bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                    🛍️ Lihat Koleksi
-                </button>
+                <a href="#featured" class="bg-rose-500 hover:bg-rose-600 text-white px-8 py-4 rounded-full font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-block">
+                🛍️ Lihat Koleksi
+                </a>
                 <button 
                     onclick="openWhatsApp()"
                     class="bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white border border-white/30 px-8 py-4 rounded-full font-medium text-lg transition-all duration-300"
@@ -230,7 +227,7 @@
     </section>
 
     <!-- Featured Products -->
-    <section class="py-20 bg-cream-50">
+    <section id="featured" class="py-20 bg-cream-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
