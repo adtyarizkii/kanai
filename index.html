@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanai - Koleksi Homewear Wanita Premium | Nyaman & Cantik di Rumah</title>
+    <title>Kanai.id | Homewear Wanita Premium, Piyama & Daster Adem</title>
     <link rel="icon" type="image/png" href="./public/favicon.png">
-    <meta name="description" content="Koleksi homewear wanita premium. Bahan adem, pengiriman cepat, CS responsif. Konsultasi gratis via WhatsApp.">
+    <meta name="description" content="Kanai.id menyediakan homewear wanita premium: piyama, daster, set rumahan bahan adem dan nyaman. Banyak pilihan warna & size. Konsultasi gratis via WhatsApp.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +80,10 @@
             }
             
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappURL, '_blank');
+            // window.open(whatsappURL, '_blank');
+            setTimeout(() => {
+                window.location.href = whatsappURL;
+            }, 100);
         }
 
         // Optional: Track conversion when user confirms purchase
@@ -166,7 +169,7 @@
         
         <div class="relative z-10 text-center px-6 max-w-4xl mx-auto mt-16">
             <h1 class="text-4xl md:text-6xl font-normal text-white mb-4 leading-tight">
-                Nyaman di Rumah,<br>
+                Homewear Wanita Premium yang Nyaman di Rumah,<br>
                 <span class="font-bold text-rose-200">Cantik Setiap Hari</span>
             </h1>
             <p class="text-lg md:text-xl text-white/95 mb-8 font-light max-w-2xl mx-auto">
@@ -191,37 +194,6 @@
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
                 <div class="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Trust Section -->
-    <section class="py-16 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
-                        <span class="text-2xl">🌸</span>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Bahan Super Adem</h3>
-                    <p class="text-stone-600 text-sm">Katun premium & rayon halus yang breathable untuk kenyamanan maksimal</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-dusty-100 rounded-full flex items-center justify-center mb-4">
-                        <span class="text-2xl">🚚</span>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Pengiriman Express</h3>
-                    <p class="text-stone-600 text-sm">Same day delivery Bandung & pengiriman cepat ke seluruh Indonesia</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
-                        <span class="text-2xl">💝</span>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2 text-rose-700">CS Super Responsif</h3>
-                    <p class="text-stone-600 text-sm">Admin siap bantu 24/7 untuk konsultasi produk & ukuran yang tepat</p>
-                </div>
             </div>
         </div>
     </section>
@@ -556,6 +528,37 @@
         </div>
     </section>
 
+    <!-- Trust Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">🌸</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Bahan Super Adem</h3>
+                    <p class="text-stone-600 text-sm">Katun premium & rayon halus yang breathable untuk kenyamanan maksimal</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-dusty-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">🚚</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">Pengiriman Express</h3>
+                    <p class="text-stone-600 text-sm">Same day delivery Bandung & pengiriman cepat ke seluruh Indonesia</p>
+                </div>
+                
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-2xl">💝</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2 text-rose-700">CS Super Responsif</h3>
+                    <p class="text-stone-600 text-sm">Admin siap bantu 24/7 untuk konsultasi produk & ukuran yang tepat</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
     <section class="py-20 bg-cream-50">
         <div class="max-w-6xl mx-auto px-6">
@@ -708,7 +711,7 @@
                     <p>Untuk pertanyaan terkait data, Anda dapat menghubungi kami melalui nomor WhatsApp yang tertera di halaman ini.</p>
                 </div>
                 
-                <button onclick="togglePrivacy()" class="mt-8 w-full bg-stone-100 hover:bg-stone-200 text-stone-600 py-3 rounded-xl font-medium transition-colors">
+                <button onclick="togglePrivacy()" class="mt-8 w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-medium transition-colors">
                     Tutup
                 </button>
             </div>
@@ -749,7 +752,7 @@
                     </ul>
                 </div>
                 
-                <button onclick="toggleTerms()" class="mt-8 w-full bg-stone-100 hover:bg-stone-200 text-stone-600 py-3 rounded-xl font-medium transition-colors">
+                <button onclick="toggleTerms()" class="mt-8 w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-medium transition-colors">
                     Tutup
                 </button>
             </div>
