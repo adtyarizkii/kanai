@@ -49,7 +49,7 @@
         });
 
         function openWhatsApp(product = '') {
-            const phoneNumber = '6285798182929'; // Replace with actual WhatsApp number
+            const phoneNumber = '62882016919883';
             let message = '';
             let eventData = {};
             
@@ -142,6 +142,26 @@
             }
         });
     </script>
+
+    <!-- Tell google if this is a brand -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Brand",
+      "name": "Kanai",
+      "url": "https://kanai.id/",
+      "logo": "https://kanai.id/public/logo.png",
+      "description": "Merek homewear wanita premium yang berfokus pada kenyamanan dan desain estetik.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Inhoftank No.82a",
+        "addressLocality": "Bandung",
+        "addressRegion": "Jawa Barat",
+        "postalCode": "40235",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
   </head>
 <body class="font-serif text-stone-800 bg-cream-50">
     
@@ -150,7 +170,7 @@
             <img 
                 id="nav-logo"
                 src="./public/logo.PNG" 
-                alt="Kanai Logo" 
+                alt="Kanai Logo"
                 class="h-12 md:h-14 w-auto opacity-0 translate-y-2 transition-all duration-500 ease-out"
             />
         </div>
@@ -160,9 +180,9 @@
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cream-50">
         <div class="absolute inset-0 z-0">
             <img 
-                src="./public/hero.jpg" 
-                alt="Kanai Homewear Collection" 
-                class="w-full h-full object-cover object-[center_35%] md:object-center"
+                src="./public/hero.jpg"
+                alt="Kanai Homewear Collection"
+                class="w-full h-full object-cover"
             />
             <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
         </div>
@@ -213,19 +233,24 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Featured Product 1 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="absolute top-0 right-0 z-20">
+                        <div class="bg-rose-500 text-white text-[10px] md:text-xs font-semibold px-6 py-1 rotate-45 translate-x-6 translate-y-3 shadow-md">
+                            Best Seller
+                        </div>
+                    </div>
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1727791865934-5a72e29f5345" 
-                            alt="Set Piyama Silk Premium dengan desain minimalis dan elegan" 
+                            src="./public/featured-products/abby.jpg" 
+                            alt="Abby Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Set Piyama Silk Premium</h3>
-                        <p class="text-stone-600 text-sm mb-3">Bahan silk halus, 5 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 189.000</p>
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Abby</h3>
+                        <p class="text-stone-600 text-sm mb-3">Bahan Rayon Twill Premium, 7 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 170.000</p>
                         <button 
-                            onclick="openWhatsApp('Set Piyama Silk Premium')"
+                            onclick="openWhatsApp('Produk Abby')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
                         >
                             💬 Tanya Admin
@@ -235,19 +260,24 @@
                 
                 <!-- Featured Product 2 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="absolute top-0 right-0 z-20">
+                        <div class="bg-rose-500 text-white text-[10px] md:text-xs font-semibold px-6 py-1 rotate-45 translate-x-6 translate-y-3 shadow-md">
+                            Best Seller
+                        </div>
+                    </div>
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1e2a64630-1765295222711.png" 
-                            alt="Daster Midi Katun dengan motif floral yang feminin dan nyaman" 
+                            src="./public/featured-products/elena.jpg" 
+                            alt="Elena Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Daster Midi Katun</h3>
-                        <p class="text-stone-600 text-sm mb-3">Motif floral, 8 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 99.000</p>
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Elena</h3>
+                        <p class="text-stone-600 text-sm mb-3">Rayon Twill Premium, 9 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 125.000</p>
                         <button 
-                            onclick="openWhatsApp('Daster Midi Katun')"
+                            onclick="openWhatsApp('Produk Elena')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
                         >
                             💬 Tanya Admin
@@ -257,19 +287,24 @@
                 
                 <!-- Featured Product 3 -->
                 <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-rose-50">
+                    <div class="absolute top-0 right-0 z-20">
+                        <div class="bg-rose-500 text-white text-[10px] md:text-xs font-semibold px-6 py-1 rotate-45 translate-x-6 translate-y-3 shadow-md">
+                            Best Seller
+                        </div>
+                    </div>
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_190d4b2b0-1769074747147.png" 
-                            alt="Set Rumahan Casual dengan kombinasi atasan dan celana yang stylish" 
+                            src="./public/featured-products/georgia.jpg" 
+                            alt="Georgia Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-6">
-                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Set Rumahan Casual</h3>
-                        <p class="text-stone-600 text-sm mb-3">Bahan rayon, 6 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 149.000</p>
+                        <h3 class="font-semibold text-lg mb-2 text-stone-800">Georgia</h3>
+                        <p class="text-stone-600 text-sm mb-3">Bahan Rayon Twill Premium, 6 pilihan warna</p>
+                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 150.000</p>
                         <button 
-                            onclick="openWhatsApp('Set Rumahan Casual')"
+                            onclick="openWhatsApp('Produk Georgia')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
                         >
                             💬 Tanya Admin
@@ -298,16 +333,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_186c3f03c-1769074750421.png" 
-                            alt="Set Piyama Silk Premium dengan bahan berkualitas tinggi" 
+                            src="./public/all-products/novelly.jpg" 
+                            alt="Novelly Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Set Piyama Silk</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 189K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Novelly</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p>
                         <button 
-                            onclick="openWhatsApp('Set Piyama Silk Premium')"
+                            onclick="openWhatsApp('Produk Novelly')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -319,16 +354,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1e0b30939-1769074749346.png" 
-                            alt="Daster Midi Katun dengan motif cantik dan bahan adem" 
+                            src="./public/all-products/nicky.jpg" 
+                            alt="Nicky Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Daster Midi Katun</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 99K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Nicky</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 75.000</p>
                         <button 
-                            onclick="openWhatsApp('Daster Midi Katun')"
+                            onclick="openWhatsApp('Produk Nicky')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -340,16 +375,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_172114bc4-1767512828727.png" 
-                            alt="Set Rumahan Casual untuk kenyamanan sehari-hari" 
+                            src="./public/all-products/callie.jpg" 
+                            alt="Callie Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Set Rumahan Casual</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 149K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Callie</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 70.000</p>
                         <button 
-                            onclick="openWhatsApp('Set Rumahan Casual')"
+                            onclick="openWhatsApp('Produk Callie')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -361,16 +396,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1cf3dbdfc-1769074750149.png" 
-                            alt="Kimono Outer elegan untuk layering yang sempurna" 
+                            src="./public/all-products/candice.jpg" 
+                            alt="Candice Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Kimono Outer</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 119K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Candice</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p>
                         <button 
-                            onclick="openWhatsApp('Kimono Outer')"
+                            onclick="openWhatsApp('Produk Candice')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -382,16 +417,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://images.unsplash.com/photo-1690143938408-2c691e925698" 
-                            alt="Nightgown Satin dengan desain mewah dan elegan" 
+                            src="./public/all-products/janice.jpg" 
+                            alt="Janice Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Nightgown Satin</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 159K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Janice</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 150.000</p>
                         <button 
-                            onclick="openWhatsApp('Nightgown Satin')"
+                            onclick="openWhatsApp('Produk Janice')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -403,16 +438,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1060790d4-1769074747891.png" 
-                            alt="Piyama Short Set untuk cuaca panas dan kenyamanan maksimal" 
+                            src="./public/all-products/izzy.jpg" 
+                            alt="Izzy Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Piyama Short Set</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 129K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Izzy</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p>
                         <button 
-                            onclick="openWhatsApp('Piyama Short Set')"
+                            onclick="openWhatsApp('Produk Izzy')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -424,16 +459,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_121a529ec-1769074748364.png" 
-                            alt="Lounge Dress dengan desain casual dan nyaman untuk aktivitas rumah" 
+                            src="./public/all-products/amora.jpg" 
+                            alt="Amora Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Lounge Dress</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 139K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Amora</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p>
                         <button 
-                            onclick="openWhatsApp('Lounge Dress')"
+                            onclick="openWhatsApp('Produk Amora')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -445,16 +480,16 @@
                 <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
                     <div class="aspect-square overflow-hidden">
                         <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_13c0dc2a7-1769074749178.png" 
-                            alt="Sleep Robe dengan bahan mewah untuk kenyamanan ekstra" 
+                            src="./public/all-products/rebecca.jpg" 
+                            alt="Rebecca Kanai Homewear" 
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                         />
                     </div>
                     <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Sleep Robe</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 179K</p>
+                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Rebecca</h3>
+                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 110.000</p>
                         <button 
-                            onclick="openWhatsApp('Sleep Robe')"
+                            onclick="openWhatsApp('Produk Rebecca')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
                         >
                             Tanya Admin
@@ -462,68 +497,6 @@
                     </div>
                 </div>
                 
-                <!-- Product 9 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
-                    <div class="aspect-square overflow-hidden">
-                        <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_1bb454ae9-1769074749801.png" 
-                            alt="Camisole Set dengan desain feminin dan bahan berkualitas" 
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Camisole Set</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 109K</p>
-                        <button 
-                            onclick="openWhatsApp('Camisole Set')"
-                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
-                        >
-                            Tanya Admin
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product 10 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
-                    <div class="aspect-square overflow-hidden">
-                        <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_16ffeab4f-1769074748712.png" 
-                            alt="Maternity Sleepwear untuk ibu hamil dengan kenyamanan maksimal" 
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Maternity Sleepwear</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 169K</p>
-                        <button 
-                            onclick="openWhatsApp('Maternity Sleepwear')"
-                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
-                        >
-                            Tanya Admin
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Product 11 -->
-                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-rose-50">
-                    <div class="aspect-square overflow-hidden">
-                        <img 
-                            src="https://img.rocket.new/generatedImages/rocket_gen_img_13cd0a3f8-1764694310209.png" 
-                            alt="Thermal Pajama Set untuk kenyamanan di cuaca dingin" 
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                        />
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Thermal Pajama</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 199K</p>
-                        <button 
-                            onclick="openWhatsApp('Thermal Pajama Set')"
-                            class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
-                        >
-                            Tanya Admin
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
