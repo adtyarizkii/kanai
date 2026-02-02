@@ -24,12 +24,12 @@
             s.parentNode.insertBefore(t,s)
         }(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
         
-        fbq('init', 'YOUR_PIXEL_ID'); // Replace YOUR_PIXEL_ID with your actual Meta Pixel ID
+        fbq('init', '1552348632736583');
         fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/> <!-- Replace YOUR_PIXEL_ID -->
+        src="https://www.facebook.com/tr?id=1552348632736583&ev=PageView&noscript=1"/>
     </noscript>
     <!-- End Meta Pixel Code -->
     
@@ -60,7 +60,7 @@
                 if (typeof fbq !== 'undefined') {
                     fbq('track', 'Lead', {
                         content_name: product,
-                        content_category: 'Homewear Product',
+                        content_category: 'Kanai Product',
                         value: 0,
                         currency: 'IDR'
                     });
@@ -72,7 +72,7 @@
             // Track Contact event for all WhatsApp interactions
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Contact', {
-                    content_name: product || 'General Inquiry',
+                    content_name: product || 'General Chat',
                     content_category: 'WhatsApp Contact',
                     value: 0,
                     currency: 'IDR'
@@ -223,7 +223,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
-                    Koleksi <span class="font-bold text-rose-600">Favorit</span>
+                    Promo <span class="font-bold text-rose-600">Best Seller</span>
                 </h2>
                 <p class="text-stone-600 max-w-2xl mx-auto">
                     Produk pilihan yang paling disukai customer dengan berbagai pilihan warna cantik
@@ -248,7 +248,20 @@
                     <div class="p-6">
                         <h3 class="font-semibold text-lg mb-2 text-stone-800">Abby</h3>
                         <p class="text-stone-600 text-sm mb-3">Bahan Rayon Twill Premium, 7 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 170.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 170.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 170.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 91.500
+                                </span>
+                                <span class="bg-rose-100 text-rose-600 text-[10px] font-bold px-2 py-0.5 rounded">
+                                    -46% Off
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Abby')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
@@ -275,7 +288,20 @@
                     <div class="p-6">
                         <h3 class="font-semibold text-lg mb-2 text-stone-800">Elena</h3>
                         <p class="text-stone-600 text-sm mb-3">Rayon Twill Premium, 9 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 125.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 125.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 125.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 83.000
+                                </span>
+                                <span class="bg-rose-100 text-rose-600 text-[10px] font-bold px-2 py-0.5 rounded">
+                                    -34% Off
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Elena')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
@@ -302,7 +328,20 @@
                     <div class="p-6">
                         <h3 class="font-semibold text-lg mb-2 text-stone-800">Georgia</h3>
                         <p class="text-stone-600 text-sm mb-3">Bahan Rayon Twill Premium, 6 pilihan warna</p>
-                        <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 150.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-lg mb-4">Hanya Rp 150.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 150.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 99.900
+                                </span>
+                                <span class="bg-rose-100 text-rose-600 text-[10px] font-bold px-2 py-0.5 rounded">
+                                    -33% Off
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Georgia')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-full font-medium transition-colors duration-300"
@@ -321,7 +360,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
                 <h2 class="text-3xl md:text-4xl font-normal mb-4 text-stone-800">
-                    Koleksi <span class="font-bold text-rose-600">Lengkap</span>
+                    Promo Koleksi <span class="font-bold text-rose-600">Lengkap</span>
                 </h2>
                 <p class="text-stone-600 max-w-2xl mx-auto">
                     Produk pilihan dengan beragam style, warna, dan size. Admin siap bantu kamu pilih yang cocok!
@@ -340,7 +379,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Novelly</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 115.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 99.000
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Novelly')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -361,7 +410,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Nicky</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 75.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 75.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 75.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 73.000
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Nicky')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -382,7 +441,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Callie</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 70.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 70.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 70.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 56.000
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Callie')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -403,7 +472,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Candice</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 115.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 115.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 96.000
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Candice')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -424,7 +503,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Janice</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 150.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 150.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 150.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 112.000
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Janice')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -445,7 +534,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Izzy</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 100.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 78.900
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Izzy')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -466,7 +565,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Amora</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 100.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 100.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 68.500
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Amora')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -487,7 +596,17 @@
                     </div>
                     <div class="p-4">
                         <h3 class="font-medium text-sm md:text-base mb-1 text-stone-800">Rebecca</h3>
-                        <p class="text-rose-600 font-bold text-sm md:text-base">Rp 110.000</p>
+                        <!-- <p class="text-rose-600 font-bold text-sm md:text-base">Rp 110.000</p> -->
+                        <div class="flex flex-col mb-4">
+                            <span class="text-stone-400 text-sm line-through decoration-rose-400/50">
+                                Rp 110.000
+                            </span>
+                            <div class="flex items-center gap-2">
+                                <span class="text-rose-600 font-extrabold text-xl">
+                                    Rp 87.500
+                                </span>
+                            </div>
+                        </div>
                         <button 
                             onclick="openWhatsApp('Produk Rebecca')"
                             class="w-full bg-rose-500 hover:bg-rose-600 text-white py-2 rounded-lg font-medium text-sm mt-3 transition-colors duration-300"
@@ -557,7 +676,7 @@
                         </div>
                     </div>
                     <p class="text-stone-600 text-sm italic">
-                        "Piyama silk-nya lembut banget! Admin juga super helpful bantu pilih size yang pas. Pengiriman cepet, packaging rapi. Pokoknya recommended!"
+                        "Piyama nya lembut banget! Admin juga super helpful bantu pilih size yang pas. Pengiriman cepet, packaging rapi. Pokoknya recommended!"
                     </p>
                 </div>
                 
